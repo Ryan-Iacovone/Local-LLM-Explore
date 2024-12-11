@@ -1002,3 +1002,692 @@ result = {'type': 'dataframe', 'value': recommended_books}
 
 [160 rows x 3 columns]}
 2024-05-13 11:32:10 [INFO] Executing Step 8: ResultParsing
+2024-12-10 22:51:57 [INFO] Question: how many teen books are there?
+2024-12-10 22:51:57 [INFO] Running PandasAI with local LLM...
+2024-12-10 22:51:57 [INFO] Prompt ID: 761b6a7c-b59b-4e0f-a87a-b6361c0d7232
+2024-12-10 22:51:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:51:57 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:51:57 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:51:57 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:52:44 [INFO] Question: how many teen books are there?
+2024-12-10 22:52:44 [INFO] Running PandasAI with local LLM...
+2024-12-10 22:52:44 [INFO] Prompt ID: 2c719ae0-a98c-4556-954a-cfad044adee8
+2024-12-10 22:52:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:52:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:52:44 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:52:44 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:53:13 [ERROR] Request failed: Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\request.py", line 69, in make_request
+    data = response.json()
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2024-12-10 22:53:13 [INFO] Querying without using training data.
+2024-12-10 22:53:14 [ERROR] Request failed: Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\helpers\request.py", line 69, in make_request
+    data = response.json()
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\requests\models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2024-12-10 22:53:14 [INFO] Querying without using training docs.
+2024-12-10 22:53:14 [INFO] Using prompt: <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ how many teen books are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-12-10 22:53:14 [INFO] Executing Step 3: CodeGenerator
+2024-12-10 22:53:40 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-10 22:53:40 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ how many teen books are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-12-10 22:53:40 [INFO] Code generated:
+            ```
+            # Import required dependencies
+import pandas as pd
+
+# Define variable dfs
+dfs = [pd.DataFrame({
+    "Title": ["Spring Sings for the Grouchy Ladybug", "I Want My Hat Back", "Poet Warrior"],
+    "Author": ["Kolker, Robert,", "Mandela, Nelson, 1918-2013",""],
+    "Item Type": ["Book", "Video Game","3D Object"],
+    "Rating": ["4.15 out of 5 stars, based on 2,275 ratings", "3.75 out of 5 stars, based on 46 ratings", "4.5 out of 5 stars, based on 5,075 ratings"],
+    "Status": ["First International edition", "revised edition","completely rev and updated"],
+    "Description": [...],
+    ... # Other columns
+})]
+
+# Function to count teen books
+def count_teen_books(dfs):
+    result = {}
+    
+    for df in dfs[0].iterrows():
+        count = len([x for x in dfs if 'teen' in str(x).lower()])
+        
+        if 'teen' in str(df[1]['Description']).lower() or ('Audiance' in str(df[1]).upper()):
+            result['count'] = count + 1
+            
+    # Return the count
+    return {"type": "number", "value": result['count']}
+
+# Declare result variable
+result = count_teen_books(dfs)
+print(result)
+            ```
+            
+2024-12-10 22:53:40 [INFO] Executing Step 4: CachePopulation
+2024-12-10 22:53:40 [INFO] Executing Step 5: CodeCleaning
+2024-12-10 22:53:40 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-12-10 22:53:40 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-12-10 22:53:40 [INFO] Using prompt: <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ how many teen books are there?
+
+You generated this python code:
+# Import required dependencies
+import pandas as pd
+
+# Define variable dfs
+dfs = [pd.DataFrame({
+    "Title": ["Spring Sings for the Grouchy Ladybug", "I Want My Hat Back", "Poet Warrior"],
+    "Author": ["Kolker, Robert,", "Mandela, Nelson, 1918-2013",""],
+    "Item Type": ["Book", "Video Game","3D Object"],
+    "Rating": ["4.15 out of 5 stars, based on 2,275 ratings", "3.75 out of 5 stars, based on 46 ratings", "4.5 out of 5 stars, based on 5,075 ratings"],
+    "Status": ["First International edition", "revised edition","completely rev and updated"],
+    "Description": [...],
+    ... # Other columns
+})]
+
+# Function to count teen books
+def count_teen_books(dfs):
+    result = {}
+    
+    for df in dfs[0].iterrows():
+        count = len([x for x in dfs if 'teen' in str(x).lower()])
+        
+        if 'teen' in str(df[1]['Description']).lower() or ('Audiance' in str(df[1]).upper()):
+            result['count'] = count + 1
+            
+    # Return the count
+    return {"type": "number", "value": result['count']}
+
+# Declare result variable
+result = count_teen_books(dfs)
+print(result)
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 94, in execute
+    code_to_run = self.get_code_to_run(input, code_context)
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 147, in get_code_to_run
+    code_to_run = self._clean_code(code, context)
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 446, in _clean_code
+    tree = ast.parse(code)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 12
+    ... # Other columns
+      ^
+SyntaxError: ':' expected after dictionary key
+
+
+Fix the python code above and return the new python code:
+2024-12-10 22:53:40 [INFO] Executing Step 1: CodeGenerator
+2024-12-10 22:53:51 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-10 22:53:51 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ how many teen books are there?
+
+You generated this python code:
+# Import required dependencies
+import pandas as pd
+
+# Define variable dfs
+dfs = [pd.DataFrame({
+    "Title": ["Spring Sings for the Grouchy Ladybug", "I Want My Hat Back", "Poet Warrior"],
+    "Author": ["Kolker, Robert,", "Mandela, Nelson, 1918-2013",""],
+    "Item Type": ["Book", "Video Game","3D Object"],
+    "Rating": ["4.15 out of 5 stars, based on 2,275 ratings", "3.75 out of 5 stars, based on 46 ratings", "4.5 out of 5 stars, based on 5,075 ratings"],
+    "Status": ["First International edition", "revised edition","completely rev and updated"],
+    "Description": [...],
+    ... # Other columns
+})]
+
+# Function to count teen books
+def count_teen_books(dfs):
+    result = {}
+    
+    for df in dfs[0].iterrows():
+        count = len([x for x in dfs if 'teen' in str(x).lower()])
+        
+        if 'teen' in str(df[1]['Description']).lower() or ('Audiance' in str(df[1]).upper()):
+            result['count'] = count + 1
+            
+    # Return the count
+    return {"type": "number", "value": result['count']}
+
+# Declare result variable
+result = count_teen_books(dfs)
+print(result)
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 94, in execute
+    code_to_run = self.get_code_to_run(input, code_context)
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 147, in get_code_to_run
+    code_to_run = self._clean_code(code, context)
+  File "C:\Users\Ryan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pandasai\pipelines\chat\code_cleaning.py", line 446, in _clean_code
+    tree = ast.parse(code)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 12
+    ... # Other columns
+      ^
+SyntaxError: ':' expected after dictionary key
+
+
+Fix the python code above and return the new python code:
+            
+2024-12-10 22:53:51 [INFO] Code generated:
+            ```
+            # Import required dependencies
+import pandas as pd
+
+# Load dataframe into dfs
+dfs = [pd.DataFrame({
+    "Title": ["Spring Sings for the Grouchy Ladybug", "I Want My Hat Back", "Poet Warrior"],
+    "Author": ["Kolker, Robert,", "Mandela, Nelson, 1918-2013",""],
+    "Item Type": ["Book", "Video Game","3D Object"],
+    "Rating": ["4.15 out of 5 stars, based on 2,275 ratings", "3.75 out of 5 stars, based on 46 ratings", "4.5 out of 5 stars, based on 5,075 ratings"],
+    "Status": ["First International edition", "revised edition","completely rev and updated"],
+    "Description": [
+        """Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man is actually kind. 
+            Though things get complicated when their fake engagement turns real.�,
+        """I want my hat back," muttered Grumpy."It's gone for good," replied Sneezy.`,
+        "This 3D object is a poet warrior"
+    ],
+    'Audiance': ['Teen', 'Adult',''],
+    # Other columns
+})]
+
+# Function to count teen books
+def count_teen_books(dfs):
+    result = 0
+    
+    for df in dfs[0].itertuples(index=False, name=None):
+        if ('teen' in str(df['Description']).lower() or df['Audiance'] == 'Teen'):
+            result += 1
+
+    # Return the count
+    return {"type": "number", "value": result}
+
+# Declare result variable
+result = count_teen_books(dfs)
+print(result)
+            ```
+            
+2024-12-10 22:53:51 [INFO] Executing Step 2: CodeCleaning
+2024-12-10 22:53:51 [ERROR] Pipeline failed on step 2: unterminated string literal (detected at line 14) (<unknown>, line 14)
+2024-12-10 22:53:51 [ERROR] Pipeline failed on step 5: unterminated string literal (detected at line 14) (<unknown>, line 14)
+2024-12-10 22:54:13 [INFO] Question: Which are the top 5 countries by sales?
+2024-12-10 22:54:13 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-12-10 22:54:13 [INFO] Prompt ID: ce42e321-5289-41c4-b705-8cb786952fd5
+2024-12-10 22:54:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:54:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:54:13 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:54:13 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:54:14 [INFO] Querying without using training data.
+2024-12-10 22:54:14 [INFO] Querying without using training docs.
+2024-12-10 22:54:14 [INFO] Using prompt: <dataframe>
+dfs[0]:10x2
+country,sales
+Canada,2600
+Japan,3200
+France,2500
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-12-10 22:54:14 [INFO] Executing Step 3: CodeGenerator
+2024-12-10 22:54:16 [INFO] Prompt used:
+            None
+            
+2024-12-10 22:54:16 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]
+top_5_countries = df.sort_values(by='sales', ascending=False).head(5)['country']
+
+# Declare result var
+result = {
+    "type": "string",
+    "value": f"The top 5 countries by sales are: {', '.join(top_5_countries)}"
+}
+            ```
+            
+2024-12-10 22:54:16 [INFO] Executing Step 4: CachePopulation
+2024-12-10 22:54:16 [INFO] Executing Step 5: CodeCleaning
+2024-12-10 22:54:16 [INFO] 
+Code running:
+```
+df = dfs[0]
+top_5_countries = df.sort_values(by='sales', ascending=False).head(5)['country']
+result = {'type': 'string', 'value': f"The top 5 countries by sales are: {', '.join(top_5_countries)}"}
+        ```
+2024-12-10 22:54:16 [INFO] Executing Step 6: CodeExecution
+2024-12-10 22:54:16 [INFO] Executing Step 7: ResultValidation
+2024-12-10 22:54:16 [INFO] Answer: {'type': 'string', 'value': 'The top 5 countries by sales are: China, United States, Japan, Germany, United Kingdom'}
+2024-12-10 22:54:16 [INFO] Executing Step 8: ResultParsing
+2024-12-10 22:55:04 [INFO] Question: Reccomend some good mystery books
+2024-12-10 22:55:04 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-12-10 22:55:04 [INFO] Prompt ID: 4b2409dd-1b66-47f3-a586-4b6a105620dd
+2024-12-10 22:55:04 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:55:04 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:55:04 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:55:04 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:55:04 [INFO] Querying without using training data.
+2024-12-10 22:55:05 [INFO] Querying without using training docs.
+2024-12-10 22:55:05 [INFO] Using prompt: <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Less,"Patterson, James, 1947-",eBook,"4.1 out of 5 stars, based on 78 ratings",25th anniversary ed,"""Enter a school of magic unlike any you have ever encountered: There are no teachers, no holidays, and no friendships save strategic ones. Survival is more important than any letter grade, for the school won't allow its students to leave until they graduate . . . or die. The rules are deceptively simple: Don't walk the halls alone. And beware of the monsters who lurk everywhere. El is uniquely prepared for the school's dangers. She may be without allies, but she possesses a dark power strong enough to level mountains and wipe out untold millions. It would be easy enough for El to defeat the monsters that prowl the school. The problem? Her powerful dark magic might also kill all the other students. So El is trying her hardest not to use her power . . . at least not until she has no other option. Meanwhile, her fellow student, the insufferable Orion Lake, is making heroism look like a breeze. He's saved hundreds of lives--including El's - with his flashy combat magic. But in the spring of their junior year, after Orion rescues El for the second time and makes her look like more of an outcast than she already is, she reaches an impulsive conclusion: Orion Lake must die. But El is about to learn some lessons she never could in the classroom: About the school. About Orion Lake. And about who she really is.""--Provided by publisher.","Legal films, Feature films, Video recordings for the hearing impaired, Video recordings for people with visual disabilities, Fiction films","Insects — Video games, Snack foods — Video games, Nintendo Switch video games, Switch video games",https://kdl.bibliocommons.com/v2/record/S174C967675,S174C249944,,Nonfiction,60.0,8.0,Movie soundtracks that bring the magic,Topic Guide,Check out these books about libraries and reading!,2023-05-23 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709635339_kdl_kids/2581075499_love_your_library
+The Natural Mother of the Child,,Downloadable Music,"4 out of 5 stars, based on 153 ratings",No Longer Available,"In a postapocalyptic world, sixteen-year-old Saint Amity joins a coven and sets out on a quest to summon the Devil in order to protect her village, which is controlled by group of pious elders.Her name is unimportant. All you must know is that today she will become one of the four saints of Haven. The elders will mark her and place the red hood on her head. With her sisters, she will stand against the evil power that lives beneath the black mountain--an evil which has already killed nine of her village's men. She will tell no one of the white-eyed beasts that follow her. Or the faceless gray women tall as houses. Or the girls she saw kissing in the elm grove. Today she will be a saint of Haven. She will rid her family of her mother's shame at last and save her people from destruction. She is not afraid. Are you?","Domestic fiction, Queer fiction, School fiction, Novels","Brain — Diseases — Nutritional aspects — Popular works, Carbohydrates — Metabolism — Popular works, Gluten-free diet",https://kdl.bibliocommons.com/v2/record/S174C737010,S174C638348,Adult,"Nonfiction, Core",52.0,32.0,,Genre Guide,,2023-05-30 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2395468189_best_of_2023_horror
+Deadly Secrets on Mackinac Island,"Summers, Courtney",Book,"4.55 out of 5 stars, based on 1,033 ratings",completely rev and updated,"Guided by the poet Virgil, Dante plunges to the very depths of Hell and embarks on his arduous journey towards God. Together they descend through the nine circles of the underworld and encounter the tormented souls of the damned - from heretics and pagans to gluttons, criminals and seducers - who tell of their sad fates and predict events still to come in Dante's life. In this first part of his Divine Comedy, Dante fused satire and humour with intellect and soaring passion to create an immortal Christian allegory of mankind's search for self-knowledge and spiritual enlightenment.",,,https://kdl.bibliocommons.com/v2/record/S174C974994,,Juvenile,,,,Back to School for Grown-Ups,,Get your hands busy and your feet in the grass! Maybe throw on some shoes before you stroll through the woods to forage for you...,2024-10-01 00:00:00 UTC,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Reccomend some good mystery books
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-12-10 22:55:05 [INFO] Executing Step 3: CodeGenerator
+2024-12-10 22:55:06 [INFO] Prompt used:
+            None
+            
+2024-12-10 22:55:06 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Filter out mystery books from the dataframe
+mystery_books = dfs[0][dfs[0]['Broad Genre'].str.contains('Mystery', case=False, na=False)]
+
+# Display the recommended mystery books
+result = {"type": "dataframe", "value": mystery_books}
+            ```
+            
+2024-12-10 22:55:06 [INFO] Executing Step 4: CachePopulation
+2024-12-10 22:55:06 [INFO] Executing Step 5: CodeCleaning
+2024-12-10 22:55:06 [INFO] 
+Code running:
+```
+mystery_books = dfs[0][dfs[0]['Broad Genre'].str.contains('Mystery', case=False, na=False)]
+result = {'type': 'dataframe', 'value': mystery_books}
+        ```
+2024-12-10 22:55:06 [INFO] Executing Step 6: CodeExecution
+2024-12-10 22:55:06 [INFO] Executing Step 7: ResultValidation
+2024-12-10 22:55:06 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [﻿Title, Author, Item Type, Rating, Status, Description, Specific Genre, Subject, Link, item_id, Audiance, Broad Genre, Item Count, Holds, Staff List Name, Category, SL_Description, SL_Created, SL_Link]
+Index: []}
+2024-12-10 22:55:06 [INFO] Executing Step 8: ResultParsing
+2024-12-10 22:55:11 [INFO] Question: Reccomend some good mystery books
+2024-12-10 22:55:11 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-12-10 22:55:11 [INFO] Prompt ID: 7502f645-2777-4b01-bcab-a02878238da7
+2024-12-10 22:55:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:55:11 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:55:11 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:55:11 [INFO] Using cached response
+2024-12-10 22:55:11 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:55:11 [INFO] Executing Step 2: Skipping...
+2024-12-10 22:55:11 [INFO] Executing Step 3: CodeGenerator
+2024-12-10 22:55:11 [INFO] Executing Step 3: Skipping...
+2024-12-10 22:55:11 [INFO] Executing Step 4: CachePopulation
+2024-12-10 22:55:11 [INFO] Executing Step 4: Skipping...
+2024-12-10 22:55:11 [INFO] Executing Step 5: CodeCleaning
+2024-12-10 22:55:11 [INFO] 
+Code running:
+```
+mystery_books = dfs[0][dfs[0]['Broad Genre'].str.contains('Mystery', case=False, na=False)]
+result = {'type': 'dataframe', 'value': mystery_books}
+        ```
+2024-12-10 22:55:11 [INFO] Executing Step 6: CodeExecution
+2024-12-10 22:55:11 [INFO] Executing Step 7: ResultValidation
+2024-12-10 22:55:11 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [﻿Title, Author, Item Type, Rating, Status, Description, Specific Genre, Subject, Link, item_id, Audiance, Broad Genre, Item Count, Holds, Staff List Name, Category, SL_Description, SL_Created, SL_Link]
+Index: []}
+2024-12-10 22:55:11 [INFO] Executing Step 8: ResultParsing
+2024-12-10 22:55:20 [INFO] Question: how many teen books are there?
+2024-12-10 22:55:20 [INFO] Running PandasAI with local LLM...
+2024-12-10 22:55:20 [INFO] Prompt ID: 120d468e-8da8-48a0-ae9a-bb66fe91ebbb
+2024-12-10 22:55:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-12-10 22:55:20 [INFO] Executing Step 0: ValidatePipelineInput
+2024-12-10 22:55:20 [INFO] Executing Step 1: CacheLookup
+2024-12-10 22:55:20 [INFO] Executing Step 2: PromptGeneration
+2024-12-10 22:55:21 [INFO] Querying without using training data.
+2024-12-10 22:55:21 [INFO] Querying without using training docs.
+2024-12-10 22:55:21 [INFO] Using prompt: <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ how many teen books are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-12-10 22:55:21 [INFO] Executing Step 3: CodeGenerator
+2024-12-10 22:55:31 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-10 22:55:31 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:3371x19
+﻿Title,Author,Item Type,Rating,Status,Description,Specific Genre,Subject,Link,item_id,Audiance,Broad Genre,Item Count,Holds,Staff List Name,Category,SL_Description,SL_Created,SL_Link
+Spring Sings for the Grouchy Ladybug,"Kolker, Robert,",Book,"4.15 out of 5 stars, based on 2,275 ratings",First International edition,"""Reena Manji doesn't love her career, her single status, and most of all, her family inserting themselves into every detail of her life. But when caring for her precious sourdough starters, Reena can drown it all out. At least until her father moves his newest employee across the hall - with hopes that Reena will marry him. But Nadim's not like the other Muslim bachelor-du-jours that her parents have dug up. If the Captain America body and the British accent weren't enough, the man appears to love eating her sourdough creations as much as she loves making them. She sure as hell would never marry a man who works for her father, but friendship with a neighbor is okay, right? When Reena's career takes a nosedive, she decides to follow her heart by entering a video cooking contest to win the artisan bread course of her dreams. The one problem? It's couples only. Nadim happily agrees to fake an engagement so they can enter the contest, but as cooking at home together brings them closer and her family gets wind of the situation, Reena can't help thinking her faux fiancé might just be the real deal.""--Provided by publisher.","Humorous fiction, Children's stories","Nannies — Juvenile fiction, Lesbians — Juvenile fiction, Secrecy — Juvenile fiction, Lesbian teenagers — Juvenile fiction, Maine — Juvenile fiction, Mental health - Teen, LGBTQIA+ - Teen, LGBTQIA+ - Gay/Lesbian - Teen",https://kdl.bibliocommons.com/v2/record/S174C951430,S174C897606,Undetermined,,,83.0,,,Take a deep dive into Shark Week with these toothy titles!,2023-08-24 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/2093632229_henry_em/2493579609_labor_day_for_kids
+I Want My Hat Back,"Mandela, Nelson, 1918-2013",Video Game,"3.75 out of 5 stars, based on 46 ratings",revised edition,"Plymouth, 1941. As sirens blare all around, the Shawbrook family take refuge in a packed shelter. Bombs have already begun to fall through the night sky when they realize their infant son, Freddie, has been forgotten in the rush, left to sleep in his crib. Terrified, Vera, his young mother, races to find him and bring him to safety. The next morning, air-raid warden David Shawbrook returns from his watch to find the shelter pulverized, and his family seemingly all dead. Dirty footprints inside their home betray the looters who have rifled through the house. Meanwhile, Maggie waits alone for her husband. Since the death of her infant son, she passes her days at home with neither joy nor aim. But not this morning. For this morning her husband has brought home a child, found abandoned in the aftermath of the terrible raid-a child she is sure is the one she held in her arms so many months before.","Instructional and educational works, Illustrated works",,https://kdl.bibliocommons.com/v2/record/S174C856816,,Adult,Picture Book Core,69.0,33.0,March Staff Picks,If You Liked...,,2024-01-30 00:00:00 UTC,
+Poet Warrior,,3D Object,"4.5 out of 5 stars, based on 5,075 ratings",completely rev and updated,"""A historical look at the launch of Earth Day and a look at the global environmental movement that has sprung from it""--",,Sun — Juvenile literature,https://kdl.bibliocommons.com/v2/record/S174C259562,S174C1009085,,Youth Core,98.0,,Nelson Mandela,General Recommendations,Looking for a light and fun mystery? These newer cozy mysteries are the first in their series.,2023-05-22 00:00:00 UTC,https://kdl.bibliocommons.com//list/share/1709637189_kdl_genres/2457306169_winter_thrillers
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ how many teen books are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-12-10 22:55:31 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Declare dfs variable: Already declared
+dfs = [
+    pd.DataFrame({
+        "Title": ["Spring Sings for the Grouchy Ladybug"],
+        "Author": ["Kolker, Robert,"],
+        "Item Type": ["Book"],
+        "Rating": ["4.15 out of 5 stars, based on 2,275 ratings"],
+        # Add other values to match your dataframe structure
+    }),
+    pd.DataFrame({
+        "Title": ["I Want My Hat Back"],
+        "Author": ["Mandela, Nelson, 1918-2013"],
+        "Item Type": ["Video Game"],
+        "Rating": ["3.75 out of 5 stars, based on 46 ratings"],
+        # Add other values to match your dataframe structure
+    }),
+    pd.DataFrame({
+        "Title": ["Poet Warrior"],
+        "Author": [],
+        "Item Type": ["3D Object"],
+        "Rating": ["4.5 out of 5 stars, based on 5,075 ratings"],
+        # Add other values to match your dataframe structure
+    })
+]
+
+# Filter teen books from the DataFrame
+teen_books = []
+for df in dfs:
+    teen_books.extend(df[df["Item Type"].str.contains("Teen", case=False)])
+
+# Count how many teen books there are
+num_teen_books = len(teen_books)
+
+# Declare result variable as a dictionary of type and value
+result = {
+    "type": "number",
+    "value": num_teen_books
+}
+print(result)
+            ```
+            
+2024-12-10 22:55:31 [INFO] Executing Step 4: CachePopulation
+2024-12-10 22:55:31 [INFO] Executing Step 5: CodeCleaning
+2024-12-10 22:55:31 [INFO] 
+Code running:
+```
+teen_books = []
+for df in dfs:
+    teen_books.extend(df[df['Item Type'].str.contains('Teen', case=False)])
+num_teen_books = len(teen_books)
+result = {'type': 'number', 'value': num_teen_books}
+print(result)
+        ```
+2024-12-10 22:55:31 [INFO] Executing Step 6: CodeExecution
+2024-12-10 22:55:31 [INFO] Executing Step 7: ResultValidation
+2024-12-10 22:55:31 [INFO] Answer: {'type': 'number', 'value': 19}
+2024-12-10 22:55:31 [INFO] Executing Step 8: ResultParsing

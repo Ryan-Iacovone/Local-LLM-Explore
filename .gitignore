@@ -1,2 +1,4 @@
 .env
-*pandasai.log
+*.csv
+cache
+pandasai.log
